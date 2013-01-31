@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Sample Ember.js Application</title>
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/vendors/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+  <!-- To make things simple, I will be including all my Handlebars templates into
+  this simple HTML file. But in a proper development environment, you should be
+  using seperate .hbs files. -->
+
+  <!-- This is the main template layout, meaning if you're familiar with
+  Rails, this is just like its application layout or in Django, the typical
+  base.html file which you will find in your templates. -->
+
+  <script type="text/x-handlebars" data-template-name="application">
+    <div class="row">
+      <h1>Application Template</h1>
+
+      {{ outlet }}
+    </div>
+  </script>
+
+  <!-- The template that will get inserted into the application {{ outlet }} when we
+  visit the root path i.e. '/'.
+
+  Note that by default, Ember will automatically render this template when you visit the
+  root path, even though you did not set its route explictly in the router. -->
+
+  <script type="text/x-handlebars" data-template-name="index">
+    <p>Whoa, this is my first Ember.js application.</p>
+  </script>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+  <script src="assets/js/vendors/handlebars-1.0.0.rc.2.js"></script>
+  <script src="assets/js/vendors/ember.js"></script>
+  <script src="assets/js/vendors/ember-data.js"></script>
+
+  <!-- Application Logic -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
