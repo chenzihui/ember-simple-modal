@@ -45,6 +45,16 @@
 
   <script type="text/x-handlebars" data-template-name="index">
     <p>Whoa, this is my first Ember.js application.</p>
+
+    {{#linkTo "about"}}Find out more about us{{/linkTo}}
+  </script>
+
+  <!-- Template for the 'About Us' page which is located at '/about', notice the same
+  naming convention that we are using for both the template and the route. -->
+  <script type="text/x-handlebars" data-template-name="about">
+    <p>And now you are on the About Us page...</p>
+
+    {{#linkTo "index"}}Go back to the Homepage{{/linkTo}}
   </script>
 
 
@@ -57,5 +67,6 @@
 
   <!-- Application Logic -->
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/router.js"></script>
 </body>
 </html>

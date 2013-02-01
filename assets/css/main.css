@@ -16,6 +16,19 @@ body {
 }
 
 /* -------------------- *\
+   Link
+\* -------------------- */
+
+a {
+  color: #05a9e3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- *\
    Containers
 \* -------------------- */
 
