@@ -59,6 +59,47 @@ a:hover {
   }
 
 /* -------------------- *\
+   Modal
+\* -------------------- */
+
+.modal-overlay {
+  background-color: #000;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.modal {
+  background-color: #fff;
+  border: 5px solid #ddd;
+  box-shadow: 0 0 20px rgba(0,0,0,.1);
+  height: 300px;
+  left: 50%;
+  margin: -150px 0 0 -250px;
+  position: absolute;
+  top: 50%;
+  width: 500px;
+  z-index: 1002;
+}
+
+  .modal h1 {
+    border-bottom: 2px solid #ddd;
+    padding: 0 0 10px;
+    text-align: center;
+  }
+
+  .modal p {
+    padding: 0 10px;
+  }
+
+  .modal button {
+    margin-left: 10px;
+  }
+
+/* -------------------- *\
    Buttons
 \* -------------------- */
 

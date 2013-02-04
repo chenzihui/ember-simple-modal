@@ -16,3 +16,13 @@ App.Router.map(function() {
   // for this to work. Ember automatically does this for us.
   this.route( 'about' );
 });
+
+App.ApplicationRoute = Ember.Route.extend({
+  events: {
+    openModal: function() {
+      var modalView = App.ModalView.create();
+
+      modalView.append();
+    }
+  }
+});

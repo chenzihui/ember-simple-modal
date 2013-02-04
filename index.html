@@ -29,7 +29,7 @@
         </div>
 
         <div class="bd-reverse">
-          <button class="btn space-big soft">Open Modal</button>
+          <button class="btn space-big soft" {{action "openModal"}}>Open Modal</button>
         </div>
       </div>
 
@@ -57,6 +57,21 @@
     {{#linkTo "index"}}Go back to the Homepage{{/linkTo}}
   </script>
 
+  <!-- Template for the modal dialog that we're going to display in this example. -->
+  <script type="text/x-handlebars" data-template-name="modal">
+    <div class="modal-overlay"></div>
+
+    <div class="modal soft">
+      <h1>Modal Dialog.</h1>
+
+      <p>The model dialog is opened by firing an event i.e. `openModal` handled by the router.</p>
+
+      <p>But to close it, we will be sending an event to be handled by the view itself instead of the router, since there is no state change in opening this modal dialog.</p>
+
+      <button class="btn space-big soft" {{action "closeModal" target="view"}}>Close Dialog</button>
+    </div>
+  </script>
+
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
@@ -68,5 +83,6 @@
   <!-- Application Logic -->
   <script src="assets/js/app.js"></script>
   <script src="assets/js/router.js"></script>
+  <script src="assets/js/views/ModalView.js"></script>
 </body>
 </html>
