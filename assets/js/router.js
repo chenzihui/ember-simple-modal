@@ -20,7 +20,7 @@ App.Router.map(function() {
 App.ApplicationRoute = Ember.Route.extend({
   events: {
     openModal: function() {
-      var modalView = App.ModalView.create();
+      var modalView = this.container.lookup('view:modal')
 
       modalView.append();
     }
